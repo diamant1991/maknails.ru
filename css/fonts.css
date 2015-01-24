@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'canter';
+    src: url('../fonts/canter_bold-webfont.eot');
+    src: url('../fonts/canter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/canter_bold-webfont.woff2') format('woff2'),
+         url('../fonts/canter_bold-webfont.woff') format('woff'),
+         url('../fonts/canter_bold-webfont.ttf') format('truetype'),
+         url('../fonts/canter_bold-webfont.svg#canterbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'DINProLigth';
+    src: url('../fonts/DINProLigth/DINProLight.eot');
+    src: url('../fonts/DINProLigth/DINProLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINProLigth/DINProLight.woff') format('woff'),
+         url('../fonts/DINProLigth/DINProLight.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('../fonts/DINPro-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'DINPro-ligth';
+    src: url('../fonts/DINPro-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('../fonts/DINPro-Regular.otf');
+    font-weight: regular;
+    font-style: normal;
+	}
+
+
+@font-face {
+    font-family: 'PFDin-ligth';
+    src: url('../fonts/PFDinTextCondPro-Light.ttf');
+    font-weight:normal;
+    font-style:normal;
+	}
+
+@font-face {
+    font-family: 'PFDin-thin';
+    src: url('../fonts/PFDinTextCondPro-Thin.ttf');
+    font-weight: Thin;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'PFDin';
+    src: url('../fonts/PFDinTextCondPro-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'PFDin-regular';
+    src: url('../fonts/PFDinTextCondPro-Regular.ttf');
+    font-weight:normal;
+    font-style: normal;
+	}

@@ -1642,10 +1642,10 @@ vew_selector{
 		background-position:-1px -1px;
 		}
 .item-compare{
-	height: 530px;
+	height: 580px;
 }
 .item-compare:hover{
-	height: 530px;
+	height: 580px;
 }
 		.item_data	{
          	position:absolute;
@@ -2858,4 +2858,156 @@ ul.news_list{
 }
 .item-compare > .doods_item_data #good_count, .item-compare > .doods_item_data #buy_btn,.item-compare > .doods_item_data .closed {
 	margin-top: 10px;
+}
+.doods_item_data .cat_cnt{
+	margin-top: 10px;
+}
+.doods_item_data .cat_cost a{
+	font-size: 13px;
+	font-family: 'DINPro';
+}
+.doods_item_data .cat_cost{
+	float: none;
+	margin: 0 auto;
+}
+.doods_item_data .cat_cost >p{
+	font-size: 16px;
+	background: url(../images/rur.png)no-repeat;
+	background-position: 60% 50%;
+	font-family: 'DINPro';
+	margin-top: 10px;
+}
+.remove-products{
+	margin-top: 40px;
+}
+
+.remove-products .closed{
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	background: url(../images/login_form_close.png)no-repeat;
+	position: relative;
+	top: 5px;
+	left: 4px;
+}
+.remove-products a:first-child{
+	font-size: 16px;
+	border-bottom: 1px dotted #221f1f;
+	display: inline-block;
+	font-family: 'DINPro';
+	cursor: pointer;
+}
+.items_menu p{
+	font-family: 'PFDin-thin';
+	font-size: 40px;
+	color: #221f1f;
+	letter-spacing: 2px;
+}
+.items_menu p span{
+	float: none;
+	margin-top: 0;
+	display: inline-block;
+	font-size: 20px;
+	font-family: 'DINPro';
+	margin-left: 5px;
+}
+.margin-items span, .margin-items a{
+	margin-top: 20px;
+	letter-spacing: 0;
+}
+.margin-items span{
+	font-family: 'PFDin-regular';
+	font-size: 30px;
+}
+.item-compare .doods_item_data a:first-child{
+	text-decoration: underline;
+	font-family: 'DINPro';
+	color: #221f1f;
+	font-size: 16px;
+}
+.item-compare .doods_item_data span{
+	font-size: 16px;
+	margin-top: 10px;
+	color: #221f1f;
+}
+.item-compare .doods_item_data span:nth-child(2){
+	font-size: 13px;
+	font-family: 'DINPro';
+}
+.border-block{
+	border-top: 1px solid #ebebeb;
+	margin-top: 20px;
+}
+.border-center{
+	border-top: 1px solid #221f1f;
+	width: 40%;
+	margin: 0 auto;
+}
+.orders h2{
+	font-size: 40px;
+	font-family: 'PFDin-thin';
+	letter-spacing: 4px;
+	color: #221f1f;
+}
+.orders span{
+	 font-family: 'PFDin-regular';
+	 color: #221f1f;
+	 font-size: 30px;
+	 letter-spacing: 2px;
+	 margin-top: 30px;
+	 display: inline-block;
+}
+.orders a{
+	font-family: 'PFDin-thin';
+	font-size: 30px;
+	color: #221f1f;
+	border-bottom: 1px dotted #221f1f;
+	margin-left: 35px;
+	margin-top: 30px;
+	display: inline-block;
+}
+.table-order{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'DINPro';
+	color: #221f1f;
+	font-size: 13px;
+	 border-spacing:0;
+}
+
+.table-order td{
+	padding: 30px 0;
+	width: 15%;
+}
+
+.table-order thead td p{
+	padding-bottom: 7px;
+	border-bottom: 1px solid #ebebeb;
+}
+.table-order .last-td{
+	width: 25%;
+}
+.table-order tbody{
+	background: #fff;
+}
+.table-order .number-font{
+	font-size: 30px;
+}
+.table-order .cost-font{
+	font-family: 'PFDin';
+	font-size: 25px;
+	background: url(../images/rur_18px.png) no-repeat;
+	background-position: 71% 55%;
+}
+
+
+
+@media (max-width: 1226px){
+	.doods_item_data .cat_cost >p{
+		background-position: 65% 50%;
+	}
+	.table-order .cost-font{
+		background-position: 80% 55%;
+	}
 }
