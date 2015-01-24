@@ -3000,7 +3000,55 @@ ul.news_list{
 	background: url(../images/rur_18px.png) no-repeat;
 	background-position: 71% 55%;
 }
+.table-order .title-product{
+	font-size: 16px;
+	margin-top: 0;
+	font-family: 'DINPro';
+	letter-spacing: 0;
+	text-decoration: underline;
+	float: left;
+}
+.table-order .spoiler-p{
+	font-size: 16px;
+	font-family: 'PFDin';
+	color: #221f1f;
+	text-align: right;
+	
+}
+.last-td .indication{
+	width: 16px;
+	height: 9px;
+	background: url(../images/arrow-bottom.png) no-repeat;
+	border-bottom: 0;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	left: 70px;
+	bottom: 50px;
+}
 
+.spoiler-body{
+	display: none;
+}
+.spoiler-body td{
+	padding: 10px 0;
+	border-top: 1px solid #ebebeb;
+}
+.spoiler-body .cost-font{
+	background-position: 85% 50%;
+	display: inline-block;
+	width: 100px;
+}
+.spoiler-body .total{
+	display: inline-block;
+	font-size: 16px;
+	font-family: 'PFDin';
+}
+.subscribe h2{
+	font-size: 40px;
+	font-family: 'PFDin-thin';
+	letter-spacing: 4px;
+}
 
 
 @media (max-width: 1226px){
