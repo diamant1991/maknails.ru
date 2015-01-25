@@ -18,7 +18,13 @@ $( document ).ready(function() {
  		if($(this).val()=='')
  	       $(this).val('Найти в каталоге')
  	})
-
+ 	$('input,textarea').focus(function(){
+  $(this).data('placeholder',$(this).attr('placeholder'))
+  $(this).attr('placeholder','');
+});
+$('input,textarea').blur(function(){
+  $(this).attr('placeholder',$(this).data('placeholder'));
+});
  	$('.indication').click(function(){ // при клике по заголовку спойлера
 				var show = $(this).attr('show'); // проверяем атрибут, в котором записано - отображен спойлер или скрыт
 				if(show == 1){ // если отображен, то прячем
