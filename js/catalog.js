@@ -1,22 +1,30 @@
-$(document).ready(function(){    $('#top_navigation').children('li').last().removeClass('top_navigation').addClass('top_navigation_last');
+$(document).ready(function(){
+    $('#top_navigation').children('li').last().removeClass('top_navigation').addClass('top_navigation_last');
     $('#top_navigation').children('li').last().children('a').css({'color':'#a49fa0'})
-    $('#colors').children('li').click(function(){   	if($(this).attr('active')=='1'){   		$(this).attr({'active':'0'});
+    $('#colors').children('li').click(function(){
+   	if($(this).attr('active')=='1'){
+   		$(this).attr({'active':'0'});
    		$(this).removeClass('colors_active').addClass('colors_unactive');
    		catalog_recalc()
    	}
-   	else{   		$(this).attr({'active':'1'});
+   	else{
+   		$(this).attr({'active':'1'});
    		$(this).removeClass('colors_unactive').addClass('colors_active');
    		catalog_recalc()
 	}
    })
 
-   $('#effects').children('li').hover(function(){        $(this).prepend($('#colors_marker'))
+   $('#effects').children('li').hover(function(){
+        $(this).prepend($('#colors_marker'))
         $('#colors_marker').css({'display':'block','width':'auto'})
         $('#colors_marker').html($(this).attr('alt'))
         width=$('#colors_marker').css('width')
         width=width.split('px')[0]
         offset=Math.round(width/2)
-        $('#colors_marker').css({'margin-left':'-'+offset+'px'})   },function(){    	$('#colors_marker').css({'display':'none'})   })
+        $('#colors_marker').css({'margin-left':'-'+offset+'px'})
+   },function(){
+    	$('#colors_marker').css({'display':'none'})
+   })
 
 
    $('#colors').children('li').hover(function(){
@@ -30,13 +38,6 @@ $(document).ready(function(){    $('#top_navigation').children('li').last().rem
    },function(){
     	$('#colors_marker').css({'display':'none'})
    })
-
-
-
-
-
-
-
 
 
    $('#effects').children('li').click(function(){
@@ -80,7 +81,8 @@ $(document).ready(function(){    $('#top_navigation').children('li').last().rem
    });
 
 
-   $('#filter_control').click(function(){       if($('#filter').attr('hidde')!='1'){
+   $('#filter_control').click(function(){
+       if($('#filter').attr('hidde')!='1'){
 	       $('#filter').attr({'hidde':'1'})
 	       $('#filter').children('ul').css({'display':'none'})
 	       $('#filter').children('div').css({'display':'none'})
@@ -98,7 +100,8 @@ $(document).ready(function(){    $('#top_navigation').children('li').last().rem
 });
 
 
-function catalog_recalc(){    //lets rock !
+function catalog_recalc(){
+    //lets rock !
 
     n_cnt=0;
 
@@ -131,10 +134,12 @@ function catalog_recalc(){    //lets rock !
 	    }
 
 	out=$('#filter_text').attr('text')+colors+color_types+types;
-	if(out.length > 40){        arr=out.split(' ')
+	if(out.length > 40){
+        arr=out.split(' ')
         new_out='';
         i=0
-        while (new_out.length < 40) {        	new_out=new_out+arr[i]+' '
+        while (new_out.length < 40) {
+        	new_out=new_out+arr[i]+' '
         	i++;
         }
 		out=new_out+' ...'

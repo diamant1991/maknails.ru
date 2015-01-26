@@ -1,3 +1,15 @@
+var mydivs=new Array('.colors','.item-other-color');
+
+function opcl(arr, e){
+    if ($(e).css('display') == 'none'){
+        for(var i in arr){   
+           $(arr[i]).hide();
+        }
+        $(e).show();       
+    }
+}
+
+
 $( document ).ready(function() {
  	$('#subscription_email').focus(function(){
  		if($(this).val()=='Ваш Email')
@@ -38,6 +50,10 @@ $('input,textarea').blur(function(){
 					$(this).css("background","url(images/arrow-up.png)")
 				}
 			});
+ 	$('.view').click(function() {
+    $('.view').removeClass('active');
+    $(this).addClass('active');
+  });
 
 
 });

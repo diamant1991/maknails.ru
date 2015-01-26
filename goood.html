@@ -9,6 +9,7 @@
 	    <script src="js/main.js"></script>
 	    <script src="js/goods.js"></script>
 	    <script src="js/login_form.js"></script>
+        <script src="js/catalog.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
 	</head>
@@ -233,15 +234,93 @@
 				</div>
 
                 <div class="clear"></div>
-				<div class="items_menu">
-                    <span>Другие цвета</span>
-                    <a>Вся палитра</a>
+				<div class="items_menu switch">
+                    <span class="view active" onclick="opcl(mydivs,'.item-other-color'); return false;">Другие цвета</span>
+                    <a class="view" onclick="opcl(mydivs,'.colors'); return false;">Вся палитра</a>
 				</div>
 
 
 
 
                 <div id="items">
+                    <div id="colors_marker"></div>
+                    <ul id="colors" class="colors">
+                            <li class="colors_unactive" style="background:#f5f5f5" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#faf3e3" alt="Ужасный"><div><div></li>
+                            <li class="colors_unactive" style="background:#edc6bf" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#ebbbc9" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#ebc3cc" alt="Черный"><div><div></li>
+                            <li class="colors_unactive" style="background:#ce90a7" alt="Красный"><div><div></li>
+                            <li class="colors_unactive" style="background:#fadadb" alt="Ораньжевый"><div><div></li>
+                            <li class="colors_unactive" style="background:#f0afc3" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#e3b9cd" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#e1628d" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#e72e71" alt="Не красивый"><div><div></li>
+                            <br>
+                            <li class="colors_unactive" style="background:#de4f91" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#d01272" alt="Ужасный"><div><div></li>
+                            <li class="colors_unactive" style="background:#c61947" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#e93f64" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#e52f45" alt="Черный"><div><div></li>
+                            <li class="colors_unactive" style="background:#ea483b" alt="Красный"><div><div></li>
+                            <li class="colors_unactive" style="background:#b11932" alt="Ораньжевый"><div><div></li>
+                            <li class="colors_unactive" style="background:#d70e3c" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#ae1237" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#af1744" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#91213a" alt="Не красивый"><div><div></li>
+                            <br>
+                            <li class="colors_unactive" style="background:#7a2528" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#701630" alt="Ужасный"><div><div></li>
+                            <li class="colors_unactive" style="background:#6a2635" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#952659" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#7a2238" alt="Черный"><div><div></li>
+                            <li class="colors_unactive" style="background:#652435" alt="Красный"><div><div></li>
+                            <li class="colors_unactive" style="background:#944e66" alt="Ораньжевый"><div><div></li>
+                            <li class="colors_unactive" style="background:#7f536e" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#9772a6" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#904eb2" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#453281" alt="Не красивый"><div><div></li>
+                            <br>
+                            <li class="colors_unactive" style="background:#5d3180" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#482e4b" alt="Ужасный"><div><div></li>
+                            <li class="colors_unactive" style="background:#5c7f85" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#6fb2cd" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#439cc6" alt="Черный"><div><div></li>
+                            <li class="colors_unactive" style="background:#2a6f96" alt="Красный"><div><div></li>
+                            <li class="colors_unactive" style="background:#405e94" alt="Ораньжевый"><div><div></li>
+                            <li class="colors_unactive" style="background:#192e57" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#8db339" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#c49b56" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#1c4a3d" alt="Не красивый"><div><div></li>
+                            <br>
+                            <li class="colors_unactive" style="background:#3c462d" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#cbb29e" alt="Ужасный"><div><div></li>
+                            <li class="colors_unactive" style="background:#bfa395" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#b69a96" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#917776" alt="Черный"><div><div></li>
+                            <li class="colors_unactive" style="background:#d6afa0" alt="Красный"><div><div></li>
+                            <li class="colors_unactive" style="background:#512d21" alt="Ораньжевый"><div><div></li>
+                            <li class="colors_unactive" style="background:#532d3c" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#3a3c31" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#ffd302" alt="Не красивый"><div><div></li>
+                            <li class="colors_unactive" style="background:#e0d5bf" alt="Не красивый"><div><div></li>
+                            <br>
+                            <li class="colors_unactive" style="background:#867e67" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#c9c9c9" alt="Ужасный"><div><div></li>
+                            <li class="colors_unactive" style="background:#c3bebb" alt="Желтый"><div><div></li>
+                            <li class="colors_unactive" style="background:#62666f" alt="Белый"><div><div></li>
+                            <li class="colors_unactive" style="background:#2e2e2e" alt="Черный"><div><div></li>
+                            <li class="colors_unactive" style="background:#33272b" alt="Красный"><div><div></li>
+                            <li class="colors_unactive" style="background:#242424" alt="Ораньжевый"><div><div></li>
+                            <li>
+                                <img src="images/left-hands.png" alt="" class="img-hands">
+                            </li>
+                            <li>
+                                <img src="images/bottom-hands.png" alt="" class="hands-bottom">
+                            </li>
+
+                        </ul>
+                    <div class="item-other-color"> 
         			<div class="item" style="background-image:url('images/test_item.png')">
                     	<div class="doods_item_data">
                         	<a href="#">Увлажнаяющий крем для рук</a>
@@ -280,6 +359,7 @@
                         	<div class="buy">Купить</div>
                         </div>
                     </div>
+                    </div> 
 
         			<div class="item" style="background-image:url('images/test_item.png')">
                     	<div class="doods_item_data">
@@ -297,7 +377,7 @@
         		</div>
 
 
-				<div class="items_menu">
+				<div class="items_menu ">
                     <span>Вам может понадобиться</span>
 				</div>
                 <div id="need_items">
