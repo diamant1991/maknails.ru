@@ -37,7 +37,7 @@ $( document ).ready(function() {
 $('input,textarea').blur(function(){
   $(this).attr('placeholder',$(this).data('placeholder'));
 });
- 	$('.indication').click(function(){ // при клике по заголовку спойлера
+ 	$('#indication').click(function(){ // при клике по заголовку спойлера
 				var show = $(this).attr('show'); // проверяем атрибут, в котором записано - отображен спойлер или скрыт
 				if(show == 1){ // если отображен, то прячем
 					$(this).attr('show', 0);
@@ -50,6 +50,7 @@ $('input,textarea').blur(function(){
 					$(this).css("background","url(images/arrow-up.png)")
 				}
 			});
+ 	
  	$('.view').click(function() {
     $('.view').removeClass('active');
     $(this).addClass('active');

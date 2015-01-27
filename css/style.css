@@ -7,19 +7,15 @@
 	float:none;
 	clear:both;
 }
-
 @font-face {
-    font-family: 'canter';
-    src: url('../fonts/canter_bold-webfont.eot');
-    src: url('../fonts/canter_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/canter_bold-webfont.woff2') format('woff2'),
-         url('../fonts/canter_bold-webfont.woff') format('woff'),
-         url('../fonts/canter_bold-webfont.ttf') format('truetype'),
-         url('../fonts/canter_bold-webfont.svg#canterbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Canter_Light';
+    src: url('../fonts/Canter_Light.eot');
+    src: url('../fonts/Canter_Light.eot') format('embedded-opentype'),
+         url('../fonts/Canter_Light.woff2') format('woff2'),
+         url('../fonts/Canter_Light.woff') format('woff'),
+         url('../fonts/Canter_Light.ttf') format('truetype'),
+         url('../fonts/Canter_Light.svg#Canter_Light') format('svg');
 }
-
 
 @font-face {
     font-family: 'DINProLigth';
@@ -199,7 +195,8 @@ body{
         	float:left;
         	margin-left:46px;
         	margin-top:36px;
-        	font:normal 30px/30px canter;
+        	font-family: 'Canter_Light';
+        	font-size: 30px;
         	color:#585555;
         	letter-spacing :0.6px;
 			}
@@ -210,7 +207,8 @@ body{
 
 		.phone_720{
         	float:left;
-        	font:normal 30px/30px canter;
+        	font-family: 'Canter_Light';
+        	font-size: 30px;
             letter-spacing :0.6px;
         	color:#585555;
         	margin-top:34px;
@@ -908,7 +906,15 @@ vew_selector{
              	margin-top:18px;
              	margin-bottom:6px;
 				}
-
+.item:hover{width:237px;
+        height:399px;
+        background:#fff;
+        background-repeat:no-repeat;
+        border:1px solid #248bcf;
+        padding-top:0px;
+        padding-left:0px;
+        background-position:-1px -1px;
+    }
 			.item_data_list a{
             	font:normal 14px/24px DINPro, roboto;
             	color:#221f1f;
@@ -1086,6 +1092,8 @@ vew_selector{
         	border-bottom:dotted 1px #000;
         	margin-right:60px;
 			}
+input{
+	outline: 0;}
 
 .items_menu span{
         	display:block;
@@ -1094,10 +1102,18 @@ vew_selector{
         	color:#221f1f;
         	text-decoration:none;
         	margin-right:60px;
-        	border-bottom:dotted 1px #000;
-        	font: 30px/30px PFDin-thin,Open Sans Condensed;
+        	font: 30px/30px PFDin-regular,Open Sans Condensed;
 			}
-
+.items_menu .view{
+			display:block;
+        	float:left;
+        	margin-top:55px;
+        	color:#221f1f;
+        	text-decoration:none;
+        	margin-right:60px;
+        	font: 30px/30px PFDin-thin,Open Sans Condensed;
+        	border-bottom: dotted 1px #000;
+}
 .view.active{
 	font: 30px/30px PFDin-regular,Open Sans Condensed;
 	border-bottom: 0;
@@ -1642,22 +1658,11 @@ vew_selector{
 		z-index: 2;
 		}
 
-	.item:hover	{
-		width:237px;
-		height:399px;
-		background:#fff;
-		background-repeat:no-repeat;
-		border:1px solid #248bcf;
-		padding-top:0px;
-		padding-left:0px;
-		background-position:-1px -1px;
-		}
+	
 .item-compare{
-	height: 580px;
+	height: 635px;
 }
-.item-compare:hover{
-	height: 580px;
-}
+
 		.item_data	{
          	position:absolute;
          	width:237px;
@@ -1905,7 +1910,7 @@ vew_selector{
 	position:fixed;
 	top:100%;
 	margin-top:-40px;
-	z-index: 3;
+	z-index: 1001;
 	}
 
 	#footer_menu_content{
@@ -2833,8 +2838,15 @@ ul.news_list{
 
 	#cart_submit{
     	width:240px;
-    	heigth:40px;
-    	background:#2087cc;
+    	height:40px;
+    	background: #2088cc; /* Old browsers */
+		background: -moz-linear-gradient(left,  #2088cc 0%, #268dd2 33%, #3198dc 67%, #349bdf 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#2088cc), color-stop(33%,#268dd2), color-stop(67%,#3198dc), color-stop(100%,#349bdf)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  #2088cc 0%,#268dd2 33%,#3198dc 67%,#349bdf 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  #2088cc 0%,#268dd2 33%,#3198dc 67%,#349bdf 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  #2088cc 0%,#268dd2 33%,#3198dc 67%,#349bdf 100%); /* IE10+ */
+		background: linear-gradient(to right,  #2088cc 0%,#268dd2 33%,#3198dc 67%,#349bdf 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2088cc', endColorstr='#349bdf',GradientType=1 ); /* IE6-9 */
     	border-radius: 20px 20px 20px 20px;
     	float:right;
     	text-align:center;
@@ -2891,6 +2903,7 @@ ul.news_list{
 }
 .remove-products{
 	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 .remove-products .closed{
@@ -2939,16 +2952,31 @@ ul.news_list{
 }
 .item-compare .doods_item_data span{
 	font-size: 16px;
-	margin-top: 10px;
 	color: #221f1f;
+	height: 22px;
+	padding-top: 8px;
 }
+	.item-compare .doods_item_data span:hover{
+		background: #f8f8f8;
+		cursor: pointer;
+	}
 .item-compare .doods_item_data span:nth-child(2){
 	font-size: 13px;
 	font-family: 'DINPro';
 }
+.doods_item_data p{
+	font-size: 13px;
+	font-family: 'DINPro';
+	font-weight: regular;
+    font-style: normal;
+    color: #221f1f;
+    margin-top: 5px;
+
+}
+
 .border-block{
 	border-top: 1px solid #ebebeb;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .border-center{
 	border-top: 1px solid #221f1f;
@@ -3007,11 +3035,21 @@ ul.news_list{
 	font-size: 30px;
 }
 .table-order .cost-font{
-	font-family: 'PFDin';
+	font-family: 'DINPro';
+	font-weight: bold;
+    font-style: normal;
 	font-size: 25px;
-	background: url(../images/rur_18px.png) no-repeat;
-	background-position: 71% 55%;
+	position: relative;
+	top: 17px;
 }
+	.table-order .cost-font:after{
+		content: "";
+		display: inline-block;
+		width: 15px;
+		height: 18px;
+		background: url(../images/rur_18px.png);
+		margin-left: 3px;
+	}
 .table-order .title-product{
 	font-size: 16px;
 	margin-top: 0;
@@ -3036,7 +3074,7 @@ ul.news_list{
 	cursor: pointer;
 	position: relative;
 	left: 70px;
-	bottom: 50px;
+	bottom: 33px;
 }
 
 .spoiler-body{
@@ -3044,17 +3082,178 @@ ul.news_list{
 }
 .spoiler-body td{
 	padding: 10px 0;
-	border-top: 1px solid #ebebeb;
+	
 }
+.spoiler-text{
+	width: 95%;
+	margin: 0 auto;
+	text-align: left;
+	border-top: 1px solid #ebebeb;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.spoiler-text span{
+	margin-top: 0;
+	position: relative;
+	top: -35px;
+}
+.spoiler-text img{
+	margin-left: 25px;
+}
+.spoiler-text .img-title{
+	font-size: 16px;
+	font-family: 'DINPro';
+	font-weight: regular;
+    font-style: normal;
+    letter-spacing: 0;
+    text-decoration: underline;
+    margin-left: 80px;
+    margin-top: 0;
+    border: 0;
+    position: relative;
+    top: -35px;
+    cursor: pointer;
+
+}
+.spoiler-text .total-small, .spoiler-text .amount-zakaz{
+	font-size: 16px;
+	font-family: 'DINPro';
+	font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0;
+}
+	.spoiler-text .total-small{
+		margin-left: 230px;
+	}
+	.spoiler-text .amount-zakaz{
+		margin-left: 70px;
+	}
+.spoiler-text .total-big{
+	font-size: 25px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: bold;
+    font-style: normal;
+    margin-left: 70px;
+    display: inline-block;
+}
+	.spoiler-text .total-big:after{
+		content: "";
+		display: inline-block;
+		width: 15;
+		height: 18px;
+		background: url(../images/rur_18px.png)no-repeat;
+		margin-left: 2px;
+	}
+
+.total-price{
+	display: inline-block;
+	width: 95%;
+	margin:0 auto;
+	border-top: 1px solid #ebebeb;
+}	
+.total-price-block{
+	display: inline-block;
+	float: right;
+	padding-right: 20px;
+}
+.total-price span:first-child{
+	font-size: 16px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: bold;
+    font-style: normal;
+}
+.total-price span:last-child{
+	font-size: 25px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: bold;
+    font-style: normal;
+    margin-left: 20px;
+}
+	.total-price span:last-child:after{
+		content: "";
+		display: inline-block;
+		width: 15;
+		height: 18px;
+		background: url(../images/rur_18px.png)no-repeat;
+		margin-left: 2px;
+	}
+
 .spoiler-body .cost-font{
 	background-position: 85% 50%;
 	display: inline-block;
 	width: 100px;
 }
+.destination{
+	width: 95%;
+	margin: 40px auto;
+}
+.destination h4{
+	font-size: 16px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: bold;
+    font-style: normal;
+}
+.destination p{
+	font-size: 16px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: regular;
+    font-style: normal;
+}
+.contact-information, .comments-destination{
+	margin-top: 30px;
+}
 .spoiler-body .total{
 	display: inline-block;
 	font-size: 16px;
 	font-family: 'PFDin';
+}
+.left-block-destination, .right-block-destination{
+	display: inline-block;
+	float: left;
+	text-align: left;
+	width: 330px;
+}
+.repeat-order a{
+	font-size: 13px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: regular;
+    font-style: normal;
+    cursor: pointer;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.repeat-order-block a:last-child{
+	background: url(../images/login_form_close.png)no-repeat;
+	background-position: 0 2px;
+	border-bottom: 0;
+	padding-left: 25px;
+	padding-bottom: 5px;
+	margin-left: 60px;
+}
+.repeat-order-block a:last-child>span{
+	margin-top: 0;
+	font-size: 13px;
+	letter-spacing: 0;
+	font-family: 'DINPro';
+	font-weight: regular;
+    font-style: normal;
+    cursor: pointer;
+    border-bottom: 1px dotted #221f1f;
+}
+.repeat-order{
+	margin: 30px auto;
+	width: 95%;
+	border-top: 1px solid #ebebeb;
+}
+.repeat-order-block{
+	float: left;
 }
 .subscribe h2{
 	font-size: 40px;
@@ -3123,6 +3322,7 @@ ul.news_list{
 .categories-subscribe input[type="checkbox"]:checked + label::before {
     background-position: 0 -68px;
 }
+
 .categories-subscribe ul li{
 	margin-top: 15px;
 }
@@ -3171,10 +3371,10 @@ ul.news_list{
 	padding-left: 40px;
 	padding-top: 50px;
 	-moz-border-radius: 15px; 
-  -webkit-border-radius: 15px; 
-  -khtml-border-radius: 15px; 
-  border-radius: 15px; 
-  display: none;
+	 -webkit-border-radius: 15px; 
+	 -khtml-border-radius: 15px; 
+	 border-radius: 15px; 
+	 display: none;
 }
 .comment-left{
 	width: 330px;
@@ -3428,7 +3628,29 @@ ul.news_list{
 	.doods_item_data .cat_cost >p{
 		background-position: 65% 50%;
 	}
-	.table-order .cost-font{
-		background-position: 80% 55%;
+	.last-td .indication{
+		left: 50px;
+	}
+	.spoiler-text .total-small{
+		margin-left: 50px;
+	}
+	.spoiler-text .img-title{
+		margin-left: 40px;
+	}
+	td.cart_text{
+		width: 192px;
+	}
+	td.cart_image{
+		width: 120px;
+	}
+	td.cart_image>img{
+		width: 99%;
+	}
+	td.cart_link{
+		width: 55px;
+	}
+	td.cart_delete{
+		text-align: left;
+		padding-left: 8px;
 	}
 }
