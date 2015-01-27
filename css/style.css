@@ -906,15 +906,7 @@ vew_selector{
              	margin-top:18px;
              	margin-bottom:6px;
 				}
-.item:hover{width:237px;
-        height:399px;
-        background:#fff;
-        background-repeat:no-repeat;
-        border:1px solid #248bcf;
-        padding-top:0px;
-        padding-left:0px;
-        background-position:-1px -1px;
-    }
+
 			.item_data_list a{
             	font:normal 14px/24px DINPro, roboto;
             	color:#221f1f;
@@ -1658,11 +1650,32 @@ input{
 		z-index: 2;
 		}
 
-	
+	.item:hover{width:237px;
+        height:399px;
+        background:#fff;
+        background-repeat:no-repeat;
+        border:1px solid #248bcf;
+        padding-top:0px;
+        padding-left:0px;
+        background-position:-1px -1px;
+    }
 .item-compare{
 	height: 635px;
 }
-
+.item.item-compare:hover{
+	border: 0;
+	width:237px;
+	height: 635px;
+		float:left;
+		background:#fff;
+		background-repeat:no-repeat;
+		border-bottom:1px solid #f8f8f8;
+		border-right:1px solid #f8f8f8;
+		padding-top:1px;
+		padding-left:1px;
+		position: relative;
+		z-index: 2;
+}
 		.item_data	{
          	position:absolute;
          	width:237px;
