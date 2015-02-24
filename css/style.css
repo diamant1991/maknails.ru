@@ -208,7 +208,7 @@ body{
 		.phone{
         	float:left;
         	margin-left:46px;
-        	margin-top:36px;
+        	margin-top:38px;
         	font-family: 'Canter_Light';
         	font-size: 30px;
         	color:#585555;
@@ -1923,7 +1923,7 @@ input{
             	float:right;
             	font:normal 13px/20px DINPro, roboto;
             	letter-spacing:0.2px;
-            	margin-left:6px;
+            	margin-left:15px;
          		}
 
          		#smm_buttons a{
@@ -1932,29 +1932,30 @@ input{
 
          			.smm_button{
          				display:block;
-         				width:18px;
+         				width:19px;
          				height:19px;
          				background-repeat:no-repeat;
+         				background: url(../images/spritesheet.png)no-repeat;
          				}
 
-         				.vk{
-                        	background-image:url('../images/vk.png')
+         				.vkontakte{
+                        		background-position: -33px -34px;
          					}
 
-         				.fb{
-                            background-image:url('../images/fb.png')
+         				.facebook{
+                           		 background-position: -5px -5px;
          					}
 
-         				.tv{
-                            background-image:url('../images/tv.png')
+         				.twitter{
+                           		 background-position: -5px -34px;
          					}
 
-         				.od{
-                            background-image:url('../images/od.png')
+         				.pen{
+                            	background-position: -33px -5px;
          					}
 
          				.mail{
-                            background-image:url('../images/mail.png')
+                            	background-image:url('../images/mail.png')
          					}
 #footer_menu_bg{
 	background:#2791d7;
