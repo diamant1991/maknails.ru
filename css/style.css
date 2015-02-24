@@ -7,6 +7,20 @@
 	float:none;
 	clear:both;
 }
+input{
+	outline: 0;
+	border: 0;
+}
+@font-face {
+    font-family: 'DINProBold';
+    src: url('../fonts/DINProBold.eot');
+    src: url('../fonts/DINProBold.eot') format('embedded-opentype'),
+         url('../fonts/DINProBold.woff2') format('woff2'),
+         url('../fonts/DINProBold.woff') format('woff'),
+         url('../fonts/DINProBold.ttf') format('truetype'),
+         url('../fonts/DINProBold.svg#DINProBold') format('svg');
+}
+
 @font-face {
     font-family: 'Canter_Light';
     src: url('../fonts/Canter_Light.eot');
@@ -464,14 +478,17 @@ body{
 
 		.subscription h2{
 	        display:block;
-	        font:bold 18px/18px DINPro, roboto;
+	        font-family: 'DINProBold';
+	        color: #000;
+	        font-size: 18px;
 	        margin-left:10px;
 			}
 
 		.subscription_720 h2{
 	        float:left;
 	        display:block;
-	        font:bold 18px/20px DINPro, roboto;
+	        font-family: 'DINProBold';
+	         font-size: 18px;
 			}
 
 		.subscription span{
@@ -508,32 +525,49 @@ body{
          	margin-left:20px;
 			}
 
-		.subscription div{
+		.subscription a{
     			width:135px;
-    			height:26px;
+    			height:24px;
     			border-radius: 13px 13px 13px 13px;
     			background:#a1a1a1;
 				margin-top:10px;
-				font:bold 13px/24px DINPro, roboto;
+				padding-top: 2px;
+				font-family: 'DINProBold';
+				font-size: 14px;
 				color:#fff;
 				cursor:pointer;
 				text-align:center;
+				display: block;
+				text-decoration: none;
+				-webkit-transition: 0.2s all ease-out;
+				-o-transition: 0.2s all ease-out;
+				transition: 0.2s all ease-out;
 				}
+					.subscription a:hover{
+						background-color: #2994da;
+					}
 
 
-		.subscription_720 div{
+		.subscription_720 a{
     			float:left;
     			width:135px;
-    			height:26px;
+    			height:24px;
     			border-radius: 13px 13px 13px 13px;
     			background:#a1a1a1;
-				font:bold 13px/24px DINPro, roboto;
+				font-family: 'DINProBold';
+				font-size: 14px;
+				padding-top: 2px;
 				color:#fff;
 				cursor:pointer;
 				text-align:center;
 				margin-left:20px;
+				-webkit-transition: 0.2s all ease-out;
+				-o-transition: 0.2s all ease-out;
+				transition: 0.2s all ease-out;
 				}
-
+				.subscription_720 a:hover{
+					background-color: #2994da;
+				}
 .c_pos_960{
    	width:960px;
 	}
@@ -1119,11 +1153,13 @@ input{
 			}
 
 			.doods_item_data a{
-            	font:normal 20px/20px Open Sans Condensed;
-            	text-decoration:none;
+            	font-size: 16px;
+            	text-decoration:underline;
             	color:#221f1f;
+            	font-family: 'PFDin-regular';
             	cursor:pointer;
-            	letter-spacing:0.2px;
+            	letter-spacing:1px;
+            	text-transform: uppercase;
 				}
 			.doods_item_data span{
             	display:block;
@@ -1607,6 +1643,7 @@ input{
 		margin-top:7px;
         font:bold 13px/28px DINPro, roboto;
         cursor:pointer;
+        color: #221f1f;
 		}
 
 	#content_menu	{
@@ -1694,7 +1731,7 @@ input{
 
 			.item_data span{
             	display:block;
-            	margin-top:8px;
+            	margin-top:11px;
             	font:normal 13px/14px DINPro, roboto;
             	padding-left:10px;
             	padding-right:10px;
@@ -1803,9 +1840,12 @@ input{
             height:42px;
             float:right;
             margin-right:10px;
+            position: relative;
 			}
 
-
+.item-img-link{
+	position: absolute;
+}
 /*footer     */
 #footer_content{
 	height:200px;

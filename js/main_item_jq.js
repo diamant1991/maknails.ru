@@ -1,8 +1,14 @@
-$( document ).ready(function() {	$('#banner').hover(function(){    	$('#baner_arrow_right').fadeIn(400);		$('#baner_selector').fadeIn(400);
-	},function(){		$('#baner_arrow_right').css({'display':'none'});
-		$('#baner_selector').css({'display':'none'});	})
+$( document ).ready(function() {
+	$('#banner').hover(function(){
+    	$('#baner_arrow_right').fadeIn(400);
+		$('#baner_selector').fadeIn(400);
+	},function(){
+		$('#baner_arrow_right').css({'display':'none'});
+		$('#baner_selector').css({'display':'none'});
+	})
 
- 	$('.cost').hover(function(){		  $(this).parent().attr({'animate':'true'})
+ 	$('.cost').hover(function(){
+		  $(this).parent().attr({'animate':'true'})
 		  $(this).animate({
 		    marginTop: '275px',
 		    height: '102px'
@@ -34,11 +40,14 @@ $( document ).ready(function() {	$('#banner').hover(function(){    	$('#baner_
 	      if($(this).attr('cost_set')!='ok'){
 		      cost=parseInt($(this).children('span').html())
 		      $(this).attr({'cost':cost,'cost_set':'ok'});
-		  }else{		  	$(this).children('span').html(parseInt($(this).attr('cost'))*val)
+		  }else{
+		  	$(this).children('span').html(parseInt($(this).attr('cost'))*val)
 		  }
 
-	      $('#c_dec').click(function(){			if($('#c_inp').val()>=2)
-	      		$('#c_inp').val(parseInt($('#c_inp').val())-1);		      	cost=parseInt($('#c_dec').parent().parent().attr('cost'))
+	      $('#c_dec').click(function(){
+			if($('#c_inp').val()>=2)
+	      		$('#c_inp').val(parseInt($('#c_inp').val())-1);
+		      	cost=parseInt($('#c_dec').parent().parent().attr('cost'))
 		      	cost=cost*parseInt($('#c_inp').val());
 		      	$('#c_dec').parent().parent().children('span').html(cost);
 		      	if($('#c_inp').val()>=10)
@@ -52,7 +61,8 @@ $( document ).ready(function() {	$('#banner').hover(function(){    	$('#baner_
 		    cost=parseInt($('#c_dec').parent().parent().attr('cost'))
 		    cost=cost*parseInt($('#c_inp').val());
 		    $('#c_dec').parent().parent().children('span').html(cost);
-	      	if($('#c_inp').val()>=10)	      		$('#c_inp').css({'width':'18px'})
+	      	if($('#c_inp').val()>=10)
+	      		$('#c_inp').css({'width':'18px'})
 	      	else
 	      		$('#c_inp').css({'width':'10px'})
 	      })
@@ -64,7 +74,8 @@ $( document ).ready(function() {	$('#banner').hover(function(){    	$('#baner_
 		  });
 
 
- 	},function(){		  $(this).parent().attr({'animate':'true'})
+ 	},function(){
+		  $(this).parent().attr({'animate':'true'})
 		  $(this).animate({
 		    marginTop: '310px',
 		    height: '60px'
@@ -85,5 +96,13 @@ $( document ).ready(function() {	$('#banner').hover(function(){    	$('#baner_
 		  $('#c_dec').remove();
 		  $('#c_inp').remove()
  	})
+
+$('input,textarea').focus(function(){
+  $(this).data('placeholder',$(this).attr('placeholder'))
+  $(this).attr('placeholder','');
+});
+$('input,textarea').blur(function(){
+  $(this).attr('placeholder',$(this).data('placeholder'));
+});
 
 });
