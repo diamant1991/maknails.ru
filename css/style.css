@@ -1470,12 +1470,15 @@ input{
 			background:#f8f8f8;
 			padding-right:4px;
 			}
-
+.carousel-items {
+   width: 10000px; /* устанавливаем большую ширину для набора элементов */
+   position: relative; /* позиционируем блок относительно основной области карусели */
+}
 #goods_info_images{
 	position:absolute;
-	width:480px;
 	height:150px;
 	margin-top:330px;
+	width: 450px;
 	}
 
 	#goods_arrow{
@@ -3282,15 +3285,17 @@ ul.news_list{
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.mini-img{
+.carousel-block{
 	width: 150px;
 	height: 150px;
 	background-color: #fff;
-	display: table-cell;
-	vertical-align: middle;
+	display: block;
+	float: left;
 	text-align: center;
 	overflow: hidden;
-	table-layout: fixed;
+}
+.carousel-wrapper{
+	overflow: hidden;
 }
 
 .repeat-order a{
