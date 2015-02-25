@@ -3272,6 +3272,27 @@ ul.news_list{
 	text-align: left;
 	width: 330px;
 }
+
+.fhoto-catalog{
+	width: 237px;
+	height: 240px;
+	position: absolute;
+	overflow: hidden;
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.mini-img{
+	width: 150px;
+	height: 150px;
+	background-color: #fff;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	table-layout: fixed;
+}
+
 .repeat-order a{
 	font-size: 13px;
 	letter-spacing: 0;
