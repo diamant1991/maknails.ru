@@ -3733,4 +3733,7 @@ ul.news_list{
 		text-align: left;
 		padding-left: 8px;
 	}
+	#map{
+		width: 710px;
+	}
 }
